@@ -884,12 +884,12 @@ func (cfg *Config) TLSConfig() *tls.Config {
 		NextProtos:     []string{acmez.ACMETLS1Protocol},
 
 		// the rest recommended for modern TLS servers
-		MinVersion: tls.VersionTLS12,
+		MinVersion: tls.VersionTLS10,
 		CurvePreferences: []tls.CurveID{
 			tls.X25519,
 			tls.CurveP256,
 		},
-		CipherSuites:             preferredDefaultCipherSuites(),
+//		CipherSuites:             preferredDefaultCipherSuites(),
 		PreferServerCipherSuites: true,
 	}
 }

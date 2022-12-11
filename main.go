@@ -418,7 +418,7 @@ func run(args []string) error {
 	client := &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
-				MinVersion: tls.VersionTLS12,
+				MinVersion: tls.VersionTLS10,
 				RootCAs:    ca,
 			},
 		},
